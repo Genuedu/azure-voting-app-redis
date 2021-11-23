@@ -8,11 +8,6 @@ pipeline {
          }
       }
       stage('Docker build') {
-         agent {
-            docker { 
-               image 'node:14-alpine' 
-               }
-         }
          steps {
             sh('docker images -a')
             sh( """
